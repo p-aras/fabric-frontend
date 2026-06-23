@@ -1,0 +1,737 @@
+/* Parta Matrix Layout & Premium Theme Stylesheet */
+
+:root {
+  --parta-primary: #5f3dc4;
+  --parta-primary-light: #7048e8;
+  --parta-primary-hover: #512da8;
+  --parta-secondary: #0b7285;
+  --parta-success: #0ca678;
+  --parta-warning: #f59e0b;
+  --parta-danger: #e03131;
+  --parta-surface: #ffffff;
+  --parta-bg: #f8f9fa;
+  --parta-border: #e9ecef;
+  --parta-text: #212529;
+  --parta-text-muted: #868e96;
+  --parta-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --parta-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --parta-shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.12);
+  --parta-radius: 12px;
+}
+
+.dark {
+  --parta-primary: #7048e8;
+  --parta-primary-light: #845ef7;
+  --parta-primary-hover: #5f3dc4;
+  --parta-secondary: #1098ad;
+  --parta-success: #12b886;
+  --parta-warning: #fbbf24;
+  --parta-danger: #fa5252;
+  --parta-surface: #1e1e24;
+  --parta-bg: #121214;
+  --parta-border: #2d2d34;
+  --parta-text: #f8f9fa;
+  --parta-text-muted: #adb5bd;
+}
+
+/* Base Parta Page wrapper */
+.parta-container {
+  padding: 24px;
+  background-color: var(--parta-bg);
+  min-height: calc(100vh - 70px);
+  color: var(--parta-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+/* Glassmorphism style cards */
+.parta-card {
+  background-color: var(--parta-surface);
+  border: 1px solid var(--parta-border);
+  border-radius: var(--parta-radius);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--parta-shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.parta-card:hover {
+  box-shadow: var(--parta-shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Header layout styling */
+.parta-header-deck {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.parta-title-block h1 {
+  margin: 0 0 4px 0;
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--parta-primary) 0%, var(--parta-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.parta-title-block p {
+  margin: 0;
+  color: var(--parta-text-muted);
+  font-size: 14px;
+}
+
+/* Lot Search Controls */
+.parta-search-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.parta-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.parta-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--parta-text-muted);
+}
+
+.parta-search-input {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  border: 2px solid var(--parta-border);
+  border-radius: 30px;
+  background-color: var(--parta-surface);
+  color: var(--parta-text);
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.parta-search-input:focus {
+  border-color: var(--parta-primary);
+  box-shadow: 0 0 0 4px rgba(112, 72, 232, 0.15);
+}
+
+/* Metadata summary cards */
+.parta-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.parta-meta-card {
+  background: linear-gradient(135deg, var(--parta-surface) 0%, var(--parta-bg) 100%);
+  border: 1px solid var(--parta-border);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.parta-meta-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(112, 72, 232, 0.1);
+  color: var(--parta-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.parta-meta-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.parta-meta-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--parta-text-muted);
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.parta-meta-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--parta-text);
+}
+
+/* Ranges Highlight Deck */
+.parta-range-banner {
+  background: linear-gradient(135deg, #1f1f2e 0%, #171725 100%);
+  color: #ffffff;
+  padding: 18px 24px;
+  border-radius: var(--parta-radius);
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  box-shadow: var(--parta-shadow-md);
+}
+
+.parta-range-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.parta-range-tag {
+  background-color: var(--parta-primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.parta-range-values {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.parta-range-values span strong {
+  color: var(--parta-warning);
+}
+
+/* Redesigned Twin Panel Split */
+.parta-workspace {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 1200px) {
+  .parta-workspace {
+    grid-template-columns: 7fr 5fr;
+  }
+}
+
+/* Interactive Matrix Grid Styling */
+.parta-table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--parta-border);
+}
+
+.parta-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.parta-table th {
+  background-color: var(--parta-border);
+  padding: 14px 16px;
+  font-weight: 750;
+  color: var(--parta-text);
+  border-bottom: 2px solid var(--parta-border);
+}
+
+.parta-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--parta-border);
+  vertical-align: middle;
+}
+
+.parta-table tr:hover {
+  background-color: rgba(112, 72, 232, 0.03);
+}
+
+.parta-shade-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.parta-shade-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  display: inline-block;
+}
+
+/* Custom Table inputs */
+.parta-cell-input {
+  width: 70px;
+  padding: 6px 8px;
+  border: 1px solid var(--parta-border);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  outline: none;
+  background-color: var(--parta-surface);
+  color: var(--parta-text);
+  transition: all 0.2s;
+}
+
+.parta-cell-input:focus {
+  border-color: var(--parta-primary);
+  box-shadow: 0 0 0 3px rgba(112, 72, 232, 0.1);
+}
+
+/* Detail Side Cards Column */
+.parta-detail-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 800px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.parta-detail-cards::-webkit-scrollbar {
+  width: 6px;
+}
+
+.parta-detail-cards::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.parta-detail-cards::-webkit-scrollbar-thumb {
+  background: var(--parta-border);
+  border-radius: 3px;
+}
+
+.parta-shade-card {
+  background-color: var(--parta-surface);
+  border: 1px solid var(--parta-border);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: var(--parta-shadow-sm);
+  transition: all 0.2s;
+}
+
+.parta-shade-card:hover {
+  box-shadow: var(--parta-shadow-md);
+  border-color: var(--parta-primary-light);
+}
+
+.parta-shade-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--parta-border);
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.parta-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.parta-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.parta-field-group label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--parta-text-muted);
+}
+
+.parta-field-input {
+  padding: 8px 10px;
+  border: 1px solid var(--parta-border);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  outline: none;
+  background-color: var(--parta-surface);
+  color: var(--parta-text);
+  width: 100%;
+}
+
+.parta-field-input:focus {
+  border-color: var(--parta-primary);
+}
+
+.parta-field-input:disabled {
+  background-color: var(--parta-border);
+  color: var(--parta-text-muted);
+  cursor: not-allowed;
+}
+
+/* Card highlight badges for calculated fields */
+.parta-highlight-badge {
+  background-color: rgba(12, 166, 120, 0.08);
+  border: 1px solid var(--parta-success);
+  color: var(--parta-success);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parta-highlight-badge.warning {
+  background-color: rgba(245, 158, 11, 0.08);
+  border: 1px solid var(--parta-warning);
+  color: var(--parta-warning);
+}
+
+.parta-highlight-badge.danger {
+  background-color: rgba(224, 49, 49, 0.08);
+  border: 1px solid var(--parta-danger);
+  color: var(--parta-danger);
+}
+
+/* Dashboard summary blocks (bottom cards) */
+.parta-dashboard-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.parta-dashboard-card {
+  background-color: var(--parta-surface);
+  border: 1px solid var(--parta-border);
+  border-radius: var(--parta-radius);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--parta-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.parta-dashboard-card.highlighted {
+  background: linear-gradient(135deg, var(--parta-primary) 0%, var(--parta-primary-light) 100%);
+  color: #ffffff;
+  border: none;
+}
+
+.parta-dashboard-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.parta-dashboard-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--parta-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.parta-dashboard-card.highlighted .parta-dashboard-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.parta-dashboard-val {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--parta-text);
+}
+
+.parta-dashboard-card.highlighted .parta-dashboard-val {
+  color: #ffffff;
+}
+
+/* Premium Button Styling */
+.parta-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.parta-btn-primary {
+  background-color: var(--parta-primary);
+  color: white;
+}
+
+.parta-btn-primary:hover {
+  background-color: var(--parta-primary-hover);
+  transform: translateY(-1px);
+}
+
+.parta-btn-secondary {
+  background-color: rgba(112, 72, 232, 0.1);
+  color: var(--parta-primary);
+}
+
+.parta-btn-secondary:hover {
+  background-color: rgba(112, 72, 232, 0.15);
+}
+
+.parta-btn-success {
+  background-color: var(--parta-success);
+  color: white;
+}
+
+.parta-btn-success:hover {
+  filter: brightness(0.95);
+}
+
+.parta-btn-danger {
+  background-color: var(--parta-danger);
+  color: white;
+}
+
+.parta-btn-danger:hover {
+  filter: brightness(0.95);
+}
+
+.parta-btn:active {
+  transform: translateY(1px);
+}
+
+.parta-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Tool Actions layout */
+.parta-actions-deck {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+/* Kharcha additional expense section */
+.parta-kharcha-section {
+  background-color: var(--parta-surface);
+  border: 1px solid var(--parta-border);
+  border-radius: var(--parta-radius);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.parta-kharcha-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--parta-border);
+  padding-bottom: 12px;
+}
+
+.parta-kharcha-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.parta-kharcha-table th {
+  padding: 10px 12px;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 2px solid var(--parta-border);
+}
+
+.parta-kharcha-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--parta-border);
+}
+
+/* Dialog Backdrop Overlay */
+.parta-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 16px;
+}
+
+.parta-dialog {
+  background-color: var(--parta-surface);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--parta-shadow-lg);
+  overflow: hidden;
+  border: 1px solid var(--parta-border);
+  animation: partaScaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes partaScaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.parta-dialog-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--parta-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, var(--parta-primary) 0%, var(--parta-primary-light) 100%);
+  color: white;
+}
+
+.parta-dialog-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.parta-dialog-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.parta-dialog-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.parta-dialog-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--parta-border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  background-color: var(--parta-bg);
+}
+
+/* Range Select List Grid */
+.parta-range-list-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 240px;
+  overflow-y: auto;
+  margin-top: 12px;
+  border: 1px solid var(--parta-border);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.parta-range-item {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--parta-border);
+  background-color: var(--parta-surface);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.parta-range-item:hover {
+  border-color: var(--parta-primary);
+  background-color: rgba(112, 72, 232, 0.04);
+}
+
+.parta-range-item.selected {
+  border-color: var(--parta-success);
+  background-color: rgba(12, 166, 120, 0.05);
+}
+
+/* Spinner and Loaders */
+.parta-spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 16px;
+}
+
+.parta-spinner {
+  width: 44px;
+  height: 44px;
+  border: 4px solid var(--parta-border);
+  border-top-color: var(--parta-primary);
+  border-radius: 50%;
+  animation: partaSpin 0.8s linear infinite;
+}
+
+@keyframes partaSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Status Notifications banner */
+.parta-notice {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 20px;
+  animation: partaFadeIn 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes partaFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.parta-notice.success {
+  background-color: rgba(12, 166, 120, 0.1);
+  border: 1px solid var(--parta-success);
+  color: var(--parta-success);
+}
+
+.parta-notice.error {
+  background-color: rgba(224, 49, 49, 0.1);
+  border: 1px solid var(--parta-danger);
+  color: var(--parta-danger);
+}
+
+.parta-notice.warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  border: 1px solid var(--parta-warning);
+  color: var(--parta-warning);
+}
